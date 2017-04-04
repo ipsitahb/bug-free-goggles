@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>TA Profile Information</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="/assets/scripts/routes.js"></script>
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <header>
+            <h1>TA Application Form</h1>
+        </header>
+
+        <div>
+                <li id="getApps"><a>Applicants</a></li>
+            
+                <li id="getAppsByStatus"><a> Applicants by Status 
+                    <select id="status">
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="Undergrad">Undergrad</option>
+                        <option value="MSc">MSc</option>
+                        <option value="PhD">PhD</option>
+                        <option value="MScAC">MScAC</option>
+                        <option value="MEng">MEng</option>
+                    </select>
+                </a></li>
+            
+                <li id="getAppsByFName"><a>Search by Family Name <input type="text" id="fname" placeholder="Enter to submit"></a></li>
+            
+                <li id="addApp"><a>Add Applicants</a></li>
+                <form id="adding"> 
+                    <input type="text" name="stunum" placeholder="student number" required pattern="\d{9}\d?"> 
+                    <input type="text" name="givenname" placeholder="given name" required>
+                    <input type="text" name="familyname" placeholder="family name" required>
+                    <input type="text" name="status" placeholder="status" required>
+                    <input type="text" name="year" placeholder="year" required> <br>
+                    <p>Courses: <input type="text" name="courses" placeholder="code, rank, experience" required pattern=".*,.*,.*"> <br> 
+                        <input type="button" id="addCourse" value="Add course"><br>    
+                    </p> 
+                    <input type="submit">
+                </form>
+            
+                <li id="deleteApp"><a>Remove Applicants</a></li>
+                <form id="delete">
+                    <input type="text" id="deletingfname" placeholder="Family Name (hit enter)"> <br>
+                    <p>OR</p>
+                    <input type="text" id="deletingstunum" placeholder="Student Number (hit enter)"> 
+                </form>
+                    
+                <li id="allCourses"><a>Courses</a></li>
+            
+                <li id="singleCourse"><a>Search for Course <input type="text" id="cid" placeholder="Enter to submit"></a></li>
+        </div>
+    </body>
+</html>
